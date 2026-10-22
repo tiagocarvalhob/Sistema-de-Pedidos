@@ -1,0 +1,23 @@
+# Configuração do Render (plano gratuito). Usada pelo botão "New > Blueprint" no painel do Render.
+services:
+  - type: web
+    name: subarashi
+    runtime: node
+    plan: free
+    region: virginia
+    buildCommand: "echo sem dependencias"
+    startCommand: node server.js
+    healthCheckPath: /api/ping
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: TABLE_SECRET        # assina os QR codes; gerado uma vez e mantido pelo Render
+        generateValue: true
+      - key: PIN                 # PIN da equipe (o Render pede para você digitar)
+        sync: false
+      - key: PIN_GERENTE         # PIN do gerente (o Render pede para você digitar)
+        sync: false
+      - key: SUPABASE_URL        # opcional: banco gratuito para não perder dados (veja supabase.sql)
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false

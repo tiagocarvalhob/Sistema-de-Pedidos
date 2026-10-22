@@ -1,0 +1,13 @@
+{
+  "name": "subarashi-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cardápio do Subarashi com pedido por WhatsApp (delivery) e modo mesa (QR code, cozinha e chamar garçom)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

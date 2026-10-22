@@ -1,0 +1,8 @@
+# pedidos e segredo das mesas (gerados pelo servidor)
+data/
+node_modules/
+img/_hero-original.jpg
+img/logo-src.jpg
+
+# configuração local do Claude
+.claude/
